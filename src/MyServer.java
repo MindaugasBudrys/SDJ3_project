@@ -1,51 +1,17 @@
-import java.rmi.*;
-import java.rmi.registry.*;
-import java.rmi.server.*;
-import java.net.*;
-import java.net.UnknownHostException;
+import java.net.MalformedURLException;
+import java.rmi.AlreadyBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
 
-public class MyServer extends java.rmi.server.UnicastRemoteObject implements RMIInterface {
-	String address;
-	Registry registry;
+public class MyServer {
 
-
-	public MyServer() throws RemoteException {
-		try {
-			address = (InetAddress.getLocalHost()).toString();
-		} catch (Exception e) {
-			System.out.println("can't get inet address.");
-		}
-		int port = 3232;
-		System.out.println("this address=" + address + ",port=" + port);
-		try {
-			registry = LocateRegistry.createRegistry(port);
-			registry.rebind("rmiServer", this);
-		} catch (RemoteException e) {
-			System.out.println("remote exception" + e);
-		}
-	}
-
-	static public void main(String args[]) throws UnknownHostException {
-		
-		System.out.println("Hello, server test ip is: " + InetAddress.getLocalHost().toString());
-		
-		
-		try {
-			MyServer server = new MyServer();
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.exit(1);
-		}
-	}
-
-	@Override
-	public void orderNewGoods(String example) throws RemoteException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void sendGoods(String example) throws RemoteException {
-		System.out.println(example);
+	public static void main(String[] args) throws RemoteException, MalformedURLException, AlreadyBoundException {
+		System.out.println("Hi lol 2nd mainserv");
+		WarehouseControl warehouseControl = new WarehouseControl();
+		Interface rmiInterface = (Interface)UnicastRemoteObject.exportObject(warehouseControl, 0);
+		Registry registry = LocateRegistry.createRegistry(1159);
+		registry.bind("Warehouse_server", rmiInterface);
 	}
 }
