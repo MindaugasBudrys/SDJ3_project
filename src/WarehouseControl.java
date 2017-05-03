@@ -16,4 +16,5 @@ public class WarehouseControl implements Interface, Serializable {
     public void sendGoods(String example) throws RemoteException {
         System.out.println(example);
     }
+    
 }
