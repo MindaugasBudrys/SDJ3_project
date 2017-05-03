@@ -13,6 +13,10 @@ public Controller(View v, Interface m){
 }
 public void menu()throws RemoteException{
     int choice;
+    String type;
+    String name;
+    int id;
+    int quantity;
     Scanner scanner = new Scanner(System.in);
 
     do{
@@ -22,9 +26,13 @@ public void menu()throws RemoteException{
         switch (choice) {
 
             case 1:
-
-                iface.orderNewGoods("#"+choice);
-
+                view.newProducts();
+                type = scanner.next();
+                name = scanner.next();
+                id = scanner.nextInt();
+                quantity = scanner.nextInt();
+                iface.orderNewGoods(type, name, id, quantity);
+                view.finished("Type: " + type + " Name: " + name + " ID: " + id + " Quantity: " + quantity);
                 break;
 //            case 2:
 //
