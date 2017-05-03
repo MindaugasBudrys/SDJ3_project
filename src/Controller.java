@@ -31,7 +31,7 @@ public void menu()throws RemoteException{
                 name = scanner.next();
                 id = scanner.nextInt();
                 quantity = scanner.nextInt();
-                iface.orderNewGoods(type, name, id, quantity);
+                //iface.orderNewGoods(type, name, id, quantity);
                 view.finished("Type: " + type + " Name: " + name + " ID: " + id + " Quantity: " + quantity);
                 break;
 //            case 2:

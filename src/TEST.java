@@ -8,7 +8,7 @@ public class TEST {
         
         try {
         	Class.forName( "com.mysql.jdbc.Driver" ).newInstance();
-        	String myUrl = "jdbc:mysql://localhost:3306/sdj3_warehouse";
+        	String myUrl = "jdbc:mysql://localhost:3306";
         	Connection con = DriverManager.getConnection(myUrl, "root", "");
         } catch (Exception e) {
         	System.err.println("Got an exception");
