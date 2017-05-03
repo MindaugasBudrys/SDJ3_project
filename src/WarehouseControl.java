@@ -8,8 +8,8 @@ public class WarehouseControl implements Interface, Serializable {
         supply = new ProductSupply();
     }
     @Override
-    public void orderNewGoods(String type, String name, int id, int quantity) throws RemoteException {
-        supply.newProduct(type, name, id, quantity);
+    public void orderNewGoods(int id, int quantity) throws RemoteException {
+        //supply.newProduct(id, quantity);
     }
 
     @Override
