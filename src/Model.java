@@ -12,9 +12,9 @@ public class Model {
         md = conn.getMetaData();
     }
 
-    public ArrayList<String> getRowByIDFromDatabase(int id) throws Exception {
-        products = new ArrayList<String>();
-        String sql = ("SELECT * FROM products WHERE product_id = (SELECT product_id FROM products WHERE product_id = 5)");
+    public String getRowByIDFromDatabase(int id) throws Exception {
+        String row = "NULL";
+        String sql = ("SELECT * FROM products WHERE product_id = (SELECT product_id FROM products WHERE product_id = " + id + ")");
         ResultSet rs = st.executeQuery(sql);
         int product_id = 0;
         String name = "NULL";
@@ -23,7 +23,23 @@ public class Model {
             product_id = rs.getInt("product_id");
             name = rs.getString("name");
             type = rs.getString("type");
-            products.add(id + " " + name + " " + type);
+            row = product_id + " " + name + " " + type;
+        }
+        return row;
+    }
+
+    public ArrayList<String> getAllProductsFromDatabase() throws Exception {
+        products = new ArrayList<>();
+        String sql = ("SELECT * FROM products");
+        ResultSet rs = st.executeQuery(sql);
+        int product_id = 0;
+        String name = "NULL";
+        String type = "NULL";
+        while (rs.next()) {
+            product_id = rs.getInt("product_id");
+            name = rs.getString("name");
+            type = rs.getString("type");
+            products.add(product_id + " " + name + " " + type);
         }
         return products;
     }

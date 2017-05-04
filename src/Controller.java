@@ -49,9 +49,10 @@ public void menu() throws RemoteException{
 
             case 1:
                 try {
-                    productsList = model.getRowByIDFromDatabase(5);
-                    System.out.println(productsList.size());
-                    System.out.println(productsList.get(0));
+                    productsList = model.getAllProductsFromDatabase();
+                    for(int i = 0; i < productsList.size(); i++){
+                        System.out.println(productsList.get(i));
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -60,9 +61,7 @@ public void menu() throws RemoteException{
                     view.orderProduct();
                     id = scanner.nextInt();
                     quantity = scanner.nextInt();
-                    for(int i = 0; i < productsList.size(); i++){
 
-                    }
                 break;
         }
     }while (choice > 0 || choice < 3);
