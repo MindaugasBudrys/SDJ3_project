@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ba83d79-85ca-4ce6-9b62-fdea1fc63987" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Interface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysql-connector-java-5.1.42-bin.jar" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Interface.java" afterPath="$PROJECT_DIR$/src/iWarehouseControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Controller.class" afterPath="$PROJECT_DIR$/bin/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/MyClient.class" afterPath="$PROJECT_DIR$/bin/MyClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/MyServer.class" afterPath="$PROJECT_DIR$/bin/MyServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Product.class" afterPath="$PROJECT_DIR$/bin/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/ProductSupply.class" afterPath="$PROJECT_DIR$/bin/ProductSupply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/TEST.class" afterPath="$PROJECT_DIR$/bin/TEST.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/View.class" afterPath="$PROJECT_DIR$/bin/View.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SDJ3_project.iml" afterPath="$PROJECT_DIR$/SDJ3_project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdj3_warehouse.sql" afterPath="$PROJECT_DIR$/sdj3_warehouse.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller.java" afterPath="$PROJECT_DIR$/src/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyClient.java" afterPath="$PROJECT_DIR$/src/MyClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyServer.java" afterPath="$PROJECT_DIR$/src/MyServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Product.java" afterPath="$PROJECT_DIR$/src/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model.java" afterPath="$PROJECT_DIR$/src/Model.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProductSupply.java" afterPath="$PROJECT_DIR$/src/ProductSupply.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TEST.java" afterPath="$PROJECT_DIR$/src/TEST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View.java" afterPath="$PROJECT_DIR$/src/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WarehouseControl.java" afterPath="$PROJECT_DIR$/src/WarehouseControl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,11 +42,27 @@
       <file leaf-file-name="TEST.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TEST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="242">
+              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding>
-                <marker date="1493894322498" expanded="true" signature="187:209" ph="SELECT * FRO... products" />
+                <marker date="1493911987705" expanded="true" signature="187:283" ph="SELECT produ... products" />
+                <marker date="1493911987705" expanded="true" signature="230:282" ph="SELECT produ... products" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sdj3_schema.products" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/af93061a/08241582-8338-4225-9ce7-2d9ac3f62b83/sdj3_schema.products">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -73,23 +71,17 @@
         <entry file="file://$PROJECT_DIR$/src/Model.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1663#1664#0" expanded="true" />
-                <element signature="e#1694#1695#0" expanded="true" />
-                <marker date="1493909351462" expanded="true" signature="403:425" ph="SELECT * FRO... products" />
+                <element signature="e#1853#1854#0" expanded="true" />
+                <element signature="e#1884#1885#0" expanded="true" />
+                <marker date="1493913423292" expanded="true" signature="422:518" ph="SELECT * FRO... products" />
+                <marker date="1493913423292" expanded="true" signature="422:520" ph="SELECT * FRO... products" />
+                <marker date="1493913423292" expanded="true" signature="465:515" ph="SELECT produ... products" />
+                <marker date="1493913423292" expanded="true" signature="465:516" ph="SELECT produ... products" />
+                <marker date="1493913423292" expanded="true" signature="465:517" ph="SELECT produ... products" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WarehouseControl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WarehouseControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="64" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,8 +99,8 @@
       <file leaf-file-name="MyServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+            <state relative-caret-position="220">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -117,8 +109,8 @@
       <file leaf-file-name="MyClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            <state relative-caret-position="286">
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -127,8 +119,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-246">
-              <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+            <state relative-caret-position="572">
+              <caret line="52" column="60" lean-forward="true" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
               <folding>
                 <element signature="e#542#543#0" expanded="true" />
                 <element signature="e#591#592#0" expanded="true" />
@@ -150,8 +142,8 @@
       <file leaf-file-name="ProductSupply.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProductSupply.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="220">
+              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -191,14 +183,14 @@
         <option value="$PROJECT_DIR$/src/WarehouseControl.java" />
         <option value="$PROJECT_DIR$/sdj3_warehouse.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/08241582-8338-4225-9ce7-2d9ac3f62b83/console.sql" />
-        <option value="$PROJECT_DIR$/src/TEST.java" />
         <option value="$PROJECT_DIR$/src/DatabaseManager.java" />
-        <option value="$PROJECT_DIR$/src/ProductSupply.java" />
         <option value="$PROJECT_DIR$/src/iModel.java" />
         <option value="$PROJECT_DIR$/src/MyClient.java" />
         <option value="$PROJECT_DIR$/src/MyServer.java" />
         <option value="$PROJECT_DIR$/src/View.java" />
         <option value="$PROJECT_DIR$/src/Product.java" />
+        <option value="$PROJECT_DIR$/src/ProductSupply.java" />
+        <option value="$PROJECT_DIR$/src/TEST.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
         <option value="$PROJECT_DIR$/src/Model.java" />
       </list>
@@ -743,8 +735,8 @@
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.MyClient" />
         <item index="1" class="java.lang.String" itemvalue="Application.MyServer" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Model" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TEST" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TEST" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Model" />
       </list>
     </recent_temporary>
   </component>
@@ -773,12 +765,12 @@
       <workItem from="1493847178736" duration="3000" />
       <workItem from="1493847188574" duration="540000" />
       <workItem from="1493847768364" duration="3356000" />
-      <workItem from="1493893971449" duration="13698000" />
+      <workItem from="1493893971449" duration="17692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44715000" />
+    <option name="totallyTimeSpent" value="48709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -793,7 +785,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32491767" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -990,18 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/af93061a/08241582-8338-4225-9ce7-2d9ac3f62b83/sdj3_schema.pallets">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdj3_warehouse.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1013,27 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/af93061a/08241582-8338-4225-9ce7-2d9ac3f62b83/sdj3_schema.products">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProductSupply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,28 +1020,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/af93061a/08241582-8338-4225-9ce7-2d9ac3f62b83/sdj3_schema.pallets">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductSupply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/af93061a/08241582-8338-4225-9ce7-2d9ac3f62b83/sdj3_schema.products">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TEST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="242">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
-            <marker date="1493894322498" expanded="true" signature="187:209" ph="SELECT * FRO... products" />
+            <marker date="1493911987705" expanded="true" signature="187:283" ph="SELECT produ... products" />
+            <marker date="1493911987705" expanded="true" signature="230:282" ph="SELECT produ... products" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="220">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1095,18 +1089,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246">
-          <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        <state relative-caret-position="572">
+          <caret line="52" column="60" lean-forward="true" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
           <folding>
             <element signature="e#542#543#0" expanded="true" />
             <element signature="e#591#592#0" expanded="true" />
@@ -1114,15 +1100,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1694#1695#0" expanded="true" />
-            <marker date="1493909351462" expanded="true" signature="403:425" ph="SELECT * FRO... products" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#1884#1885#0" expanded="true" />
+            <marker date="1493913423292" expanded="true" signature="422:518" ph="SELECT * FRO... products" />
+            <marker date="1493913423292" expanded="true" signature="422:520" ph="SELECT * FRO... products" />
+            <marker date="1493913423292" expanded="true" signature="465:515" ph="SELECT produ... products" />
+            <marker date="1493913423292" expanded="true" signature="465:516" ph="SELECT produ... products" />
+            <marker date="1493913423292" expanded="true" signature="465:517" ph="SELECT produ... products" />
           </folding>
         </state>
       </provider>

@@ -8,23 +8,25 @@ public class Model {
     private ArrayList<String> products;
     DatabaseMetaData md;
 
-    public Model() throws Exception{
-        products = new ArrayList<String>();
+    public Model() throws Exception {
         md = conn.getMetaData();
     }
-    public void addAllProductsToArrayList() throws Exception{
-        String sql = ("SELECT * FROM products");
+
+    public ArrayList<String> getRowByIDFromDatabase(int id) throws Exception {
+        products = new ArrayList<String>();
+        String sql = ("SELECT * FROM products WHERE product_id = (SELECT product_id FROM products WHERE product_id = 5)");
         ResultSet rs = st.executeQuery(sql);
-        int id = 0;
+        int product_id = 0;
         String name = "NULL";
         String type = "NULL";
         while (rs.next()) {
-            id = rs.getInt("product_id");
+            product_id = rs.getInt("product_id");
             name = rs.getString("name");
             type = rs.getString("type");
-            addProductToList(id, name, type);
-        }  }
-
+            products.add(id + " " + name + " " + type);
+        }
+        return products;
+    }
     static Connection conn;
 
     static Statement st;
@@ -48,7 +50,8 @@ public class Model {
         }
     }
     public void addProductToList(int id, String name, String type) throws Exception, RemoteException{
-        products.add(id + "/" + name + "/" + type );
+        products = new ArrayList<String>();
+        products.add(id + " " + name + " " + type );
     }
     public ArrayList<String> getAllProducts(){
         return products;

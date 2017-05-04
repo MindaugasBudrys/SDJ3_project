@@ -3,7 +3,7 @@ import java.sql.*;
 public class TEST {
         public static void main(String[] args) throws Exception {
             DatabaseMetaData md = conn.getMetaData();
-            String sql = ("SELECT * FROM products");
+            String sql = ("SELECT * FROM products WHERE product_id = (SELECT product_id FROM products WHERE product_id = 3)");
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
                 System.out.print(rs.getInt("product_id"));

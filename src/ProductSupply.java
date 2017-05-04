@@ -11,7 +11,7 @@ public class ProductSupply implements Serializable{
 
     public void newProduct(String type, String name, int id, int quantity) {
         for (int i = 1; i <= quantity; i++) {
-            products.add(new Product(type, name, id));
+            //products.add(new Product(type, name, id));
         }
     }
 }

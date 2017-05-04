@@ -49,8 +49,9 @@ public void menu() throws RemoteException{
 
             case 1:
                 try {
-                    model.addAllProductsToArrayList();
-                    productsList = model.getAllProducts();
+                    productsList = model.getRowByIDFromDatabase(5);
+                    System.out.println(productsList.size());
+                    System.out.println(productsList.get(0));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
