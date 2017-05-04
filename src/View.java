@@ -1,17 +1,14 @@
+import java.util.ArrayList;
 
 public class View {
     public void menu(){
         System.out.println("***Menu***");
-        System.out.println("Write 1 to order products");
-        System.out.println("Write 2 to...");
+        System.out.println("Write 1 to get a list of available products");
+        System.out.println("Write 2 to order products");
     }
 
-    public void newProducts(){
+    public void orderProduct(){
         System.out.println("***Menu***");
-        System.out.println("");
-        System.out.println("Write product ID from the list");
-    }
-    public void finished(String information){
-        System.out.println(information);
+        System.out.println("Write product ID and QUANTITY");
     }
 }

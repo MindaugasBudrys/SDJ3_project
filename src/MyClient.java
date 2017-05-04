@@ -5,9 +5,14 @@ import java.net.*;
 public class MyClient {
 	public static void main(String[] args) throws RemoteException, MalformedURLException, NotBoundException {
 		Registry registry = LocateRegistry.getRegistry("localhost", (new Integer(1159)).intValue());
-		Interface inter = (Interface) (registry.lookup("Warehouse_server"));
+		iWarehouseControl inter = (iWarehouseControl) (registry.lookup("Warehouse_server"));
 		View view = new View();
-		Controller controller = new Controller(view, inter);
+		Controller controller = null;
+		try {
+			controller = new Controller(view, inter);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		controller.menu();
 	}
 }

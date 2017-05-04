@@ -1,11 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
---
--- Vært: 127.0.0.1
--- Genereringstid: 03. 05 2017 kl. 22:19:13
--- Serverversion: 10.1.21-MariaDB
--- PHP-version: 7.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";

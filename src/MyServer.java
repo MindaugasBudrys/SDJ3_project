@@ -7,11 +7,11 @@ import java.rmi.server.UnicastRemoteObject;
 
 public class MyServer {
 
-	public static void main(String[] args) throws RemoteException, MalformedURLException, AlreadyBoundException {
-		System.out.println("Hi lol 2nd mainserv");
+	public static void main(String[] args) throws RemoteException, MalformedURLException, AlreadyBoundException, Exception {
+		System.out.println("Server is working...");
 		WarehouseControl warehouseControl = new WarehouseControl();
-		Interface rmiInterface = (Interface)UnicastRemoteObject.exportObject(warehouseControl, 0);
+		iWarehouseControl rmiIWarehouseControl = (iWarehouseControl)UnicastRemoteObject.exportObject(warehouseControl, 0);
 		Registry registry = LocateRegistry.createRegistry(1159);
-		registry.bind("Warehouse_server", rmiInterface);
+		registry.bind("Warehouse_server", rmiIWarehouseControl);
 	}
 }

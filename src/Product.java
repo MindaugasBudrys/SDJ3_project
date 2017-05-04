@@ -6,7 +6,7 @@ public class Product implements Serializable{
     String name;
     int id;
 
-    public Product(String t, String n, int i){
+    public Product( int i, String n, String t){
         this.type = t;
         this.name = n;
         this.id = i;

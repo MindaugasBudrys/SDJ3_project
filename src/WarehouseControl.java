@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.rmi.RemoteException;
 
-public class WarehouseControl implements Interface, Serializable {
+public class WarehouseControl implements iWarehouseControl, Serializable {
     ProductSupply supply;
 
     public WarehouseControl(){

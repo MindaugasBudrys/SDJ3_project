@@ -1,20 +1,42 @@
-import java.io.Serializable;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Controller {
 
-    Interface iface;
+    iWarehouseControl iWarehouseControl;
     View view;
+    Model model;
+    ArrayList<String> productsList;
+    ArrayList<Product> products;
 
-public Controller(View v, Interface m){
+public Controller(View v, iWarehouseControl m) throws Exception{
     this.view = v;
-    this.iface = m;
+    this.iWarehouseControl = m;
+    this.model = new Model();
+    productsList = new ArrayList<>();
+    products = new ArrayList<Product>();
 }
-public void menu()throws RemoteException{
-    int choice;
-    String type;
+public void addProducts(int id, String name, String type){
+    products.add(new Product(id, name, type));
+}
+public void createProduct(){
+    String lineTxt = null;
+    int id;
     String name;
+    String type;
+    while (lineTxt != null)
+    {
+        String[] token = lineTxt.split("/");
+        id = Integer.parseInt(token[0].trim());
+        name = token[1].trim();
+        type = token[1].trim();
+        addProducts(id, name, type);
+    }
+}
+
+public void menu() throws RemoteException{
+    int choice;
     int id;
     int quantity;
     Scanner scanner = new Scanner(System.in);
@@ -26,24 +48,21 @@ public void menu()throws RemoteException{
         switch (choice) {
 
             case 1:
-                view.newProducts();
-                type = scanner.next();
-                name = scanner.next();
-                id = scanner.nextInt();
-                quantity = scanner.nextInt();
-                //iface.orderNewGoods(type, name, id, quantity);
-                view.finished("Type: " + type + " Name: " + name + " ID: " + id + " Quantity: " + quantity);
+                try {
+                    model.addAllProductsToArrayList();
+                    productsList = model.getAllProducts();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 break;
-//            case 2:
-//
-//                view.insertDate();
-//                day1 = scanner.nextInt();
-//                month1 = scanner.nextInt();
-//                year1 = scanner.nextInt();
-//                System.out.println(model
-//                        .getReservation(day1, month1, year1));
-//
-//                break;
+            case 2:
+                    view.orderProduct();
+                    id = scanner.nextInt();
+                    quantity = scanner.nextInt();
+                    for(int i = 0; i < productsList.size(); i++){
+
+                    }
+                break;
         }
     }while (choice > 0 || choice < 3);
 }
