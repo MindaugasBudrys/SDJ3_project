@@ -23,7 +23,7 @@ public class Model {
             product_id = rs.getInt("product_id");
             name = rs.getString("name");
             type = rs.getString("type");
-            row = product_id + " " + name + " " + type;
+            row = product_id + "," + name + "," + type;
         }
         return row;
     }

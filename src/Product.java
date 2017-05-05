@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.rmi.RemoteException;
 
 public class Product implements Serializable{
 
@@ -6,7 +7,7 @@ public class Product implements Serializable{
     String name;
     int id;
 
-    public Product( int i, String n, String t){
+    public Product( int i, String n, String t) throws RemoteException {
         this.type = t;
         this.name = n;
         this.id = i;

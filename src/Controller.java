@@ -4,36 +4,39 @@ import java.util.Scanner;
 
 public class Controller {
 
-    iWarehouseControl iWarehouseControl;
-    View view;
-    Model model;
-    ArrayList<String> productsList;
-    ArrayList<Product> products;
+    private iWarehouseControl warehouseControl;
+    private View view;
+    private Model model;
+    private ArrayList<String> productsList;
+    private ArrayList<Product> products;
+    private int product_id;
+    private String name;
+    private String type;
 
 public Controller(View v, iWarehouseControl m) throws Exception{
     this.view = v;
-    this.iWarehouseControl = m;
+    this.warehouseControl = m;
     this.model = new Model();
     productsList = new ArrayList<>();
-    products = new ArrayList<Product>();
-}
-public void addProducts(int id, String name, String type){
-    products.add(new Product(id, name, type));
-}
-public void createProduct(){
-    String lineTxt = null;
-    int id;
-    String name;
-    String type;
-    while (lineTxt != null)
-    {
-        String[] token = lineTxt.split("/");
-        id = Integer.parseInt(token[0].trim());
-        name = token[1].trim();
-        type = token[1].trim();
-        addProducts(id, name, type);
     }
-}
+//public void addProducts(int id, String name, String type){
+//    products.add(new Product(id, name, type));
+//}
+
+//public void createProduct(){
+//    String lineTxt = null;
+//    int id;
+//    String name;
+//    String type;
+//    while (lineTxt != null)
+//    {
+//        String[] token = lineTxt.split("/");
+//        id = Integer.parseInt(token[0].trim());
+//        name = token[1].trim();
+//        type = token[1].trim();
+//        addProducts(id, name, type);
+//    }
+//}
 
 public void menu() throws RemoteException{
     int choice;
@@ -58,12 +61,26 @@ public void menu() throws RemoteException{
                 }
                 break;
             case 2:
+                try {
                     view.orderProduct();
                     id = scanner.nextInt();
                     quantity = scanner.nextInt();
-
+                    splitString(model.getRowByIDFromDatabase(id));
+                    warehouseControl.orderNewProducts(product_id, name, type, quantity);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 break;
         }
-    }while (choice > 0 || choice < 3);
+    }while (choice > 0 || choice < 9);
+}
+public void splitString(String string){
+
+        String[] token = string.split(",");
+        product_id = Integer.parseInt(token[0]);
+        name = token[1];
+        type = token[2];
+
+    System.out.println(product_id + "/" + name + "/" + type);
 }
 }
