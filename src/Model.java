@@ -14,8 +14,8 @@ public class Model {
 
     public String getRowByIDFromDatabase(int id) throws Exception {
         String row = "NULL";
-        String sql = ("SELECT * FROM products WHERE product_id = (SELECT product_id FROM products WHERE product_id = " + id + ")");
-        ResultSet rs = st.executeQuery(sql);
+        String query = ("SELECT * FROM products WHERE product_id = (SELECT product_id FROM products WHERE product_id = " + id + ")");
+        ResultSet rs = st.executeQuery(query);
         int product_id = 0;
         String name = "NULL";
         String type = "NULL";
@@ -30,8 +30,8 @@ public class Model {
 
     public ArrayList<String> getAllProductsFromDatabase() throws Exception {
         products = new ArrayList<>();
-        String sql = ("SELECT * FROM products");
-        ResultSet rs = st.executeQuery(sql);
+        String query = ("SELECT * FROM products");
+        ResultSet rs = st.executeQuery(query);
         int product_id = 0;
         String name = "NULL";
         String type = "NULL";
@@ -43,6 +43,18 @@ public class Model {
         }
         return products;
     }
+
+    public boolean insertIntoDatabase(int pallet_id, int product_id, int shelf_id, int quantity ) throws Exception {
+        String query = ("INSERT INTO pallets (pallet_id, product_id, shelf_id, quantity) VALUES (?, ?, ?, ?)");
+        PreparedStatement preparedStmt = conn.prepareStatement(query);
+        preparedStmt.setInt (1, pallet_id);
+        preparedStmt.setInt (2, product_id);
+        preparedStmt.setInt (3, shelf_id);
+        preparedStmt.setInt (4, quantity);
+        preparedStmt.execute();
+        return true;
+    }
+
     static Connection conn;
 
     static Statement st;

@@ -15,10 +15,13 @@ public class ArrivalStation implements Serializable{
         for (HashMap.Entry<Product, Integer> entry : listOfProducts.entrySet()) {
             Product prod = entry.getKey();
             Integer integer = entry.getValue();
-            SmallPallet smallPallet = new SmallPallet(prod, integer);
+            SmallPallet smallPallet = new SmallPallet(prod, integer, true);
             pallets.add(smallPallet);
             System.out.println(prod.getId() + " " + integer);
         }
 
+    }
+    public ArrayList<SmallPallet> getPallets(){
+        return pallets;
     }
 }

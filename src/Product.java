@@ -3,9 +3,9 @@ import java.rmi.RemoteException;
 
 public class Product implements Serializable{
 
-    String type;
-    String name;
-    int id;
+    private String type;
+    private String name;
+    private int id;
 
     public Product( int i, String n, String t) throws RemoteException {
         this.type = t;
