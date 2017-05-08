@@ -44,6 +44,7 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
             conveyorBelt.addNewPallets(arrivalStation.getPallets());
             for( int i = 0; i < conveyorBelt.getPallets().size(); i++) {
                 storeToShelf();
+                System.out.println("HELLOOOOOOO1");
             }
         } catch (RemoteException e) {
             e.printStackTrace();
@@ -76,7 +77,7 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
     public void storeToShelf() throws RemoteException{
 
         SmallPallet pallet = conveyorBelt.getToShelf();
-        int pallet_id = pallet.getProduct().getId();
+        int pallet_id = pallet.getId();
         int product_id = pallet.getProduct().getId();
         int shelf_id = 0;//What is that value?
         int quantity = pallet.getQuantity();

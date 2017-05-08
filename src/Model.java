@@ -44,13 +44,14 @@ public class Model {
         return products;
     }
 
-    public boolean insertIntoDatabase(int pallet_id, int product_id, int shelf_id, int quantity ) throws Exception {
-        String query = ("INSERT INTO pallets (pallet_id, product_id, shelf_id, quantity) VALUES (?, ?, ?, ?)");
-        PreparedStatement preparedStmt = conn.prepareStatement(query);
-        preparedStmt.setInt (1, pallet_id);
-        preparedStmt.setInt (2, product_id);
-        preparedStmt.setInt (3, shelf_id);
-        preparedStmt.setInt (4, quantity);
+    public boolean updateQuantityIntoDatabase(int product_id, int quantity ) throws Exception {
+    	String query2 = "UPDATE pallets SET quantity = quantity + " + quantity + " WHERE product_id = " + product_id;
+       //String query = ("INSERT INTO pallets (pallet_id, product_id, shelf_id, quantity) VALUES (?, ?, ?, ?)");
+        PreparedStatement preparedStmt = conn.prepareStatement(query2);
+        //preparedStmt.setInt (1, pallet_id);
+        //preparedStmt.setInt (2, product_id);
+        //preparedStmt.setInt (3, shelf_id);
+        //preparedStmt.setInt (4, quantity);
         preparedStmt.execute();
         return true;
     }

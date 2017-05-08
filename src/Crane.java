@@ -7,7 +7,7 @@ public class Crane {
     }
     public void storeToDatabase(int pallet_id, int product_id, int shelf_id, int quantity ){
         try {
-            model.insertIntoDatabase(pallet_id, product_id, shelf_id, quantity);
+            model.updateQuantityIntoDatabase(product_id, quantity);
         } catch (Exception e) {
             e.printStackTrace();
         }
