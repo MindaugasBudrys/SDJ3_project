@@ -18,4 +18,6 @@ public class ProductSupply implements Serializable{
     public HashMap<Product, Integer> getProducts(){
         return products;
     }
+    
+
 }

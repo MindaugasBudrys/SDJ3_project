@@ -10,9 +10,6 @@ public class Controller {
     private Model model;
     private ArrayList<String> productsList;
     private ArrayList<Product> products;
-    private int product_id;
-    private String name;
-    private String type;
 
 public Controller(View v, iWarehouseControl m) throws Exception{
     this.view = v;
@@ -63,23 +60,27 @@ public void menu() throws RemoteException{
                 break;
             case 2:
                 try {
-                	HashMap<Integer, Integer> newProducts = new HashMap<>();
+                	ArrayList<String> newProducts = new ArrayList<String>();
                     view.orderProduct();
-                    
-                    
-                    String readString = scanner.nextLine();
-                    if (readString.equals("")) {
-                        System.out.println("Ok.");
-                    }
-                    if (scanner.hasNextLine()) {
+
+                    boolean keepReading = true;
+                    while (keepReading) {
                     	id = scanner.nextInt();
-                        splitString(model.getRowByIDFromDatabase(id));
                     	quantity = scanner.nextInt();
-                    	newProducts.put(id, quantity);
-                    } else {
-                        readString = null;
+                    	String data = model.getRowByIDFromDatabase(id) + "," + quantity;
+                    	System.out.println(("DATA: " + data));
+                    	newProducts.add(data);
+
+                    	System.out.println("Do you want to order more products? Y/N");
+                    	if (scanner.next().equals("Y")){
+                    		keepReading = true;
+                    	} else {
+                    		keepReading = false;
+                    	}
+
                     }
-                    
+
+                    System.out.println("Before warehouse control");
                     warehouseControl.orderNewProducts(newProducts);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -90,7 +91,7 @@ public void menu() throws RemoteException{
             		view.orderProductForDeparture();
             		id = scanner.nextInt();
             		quantity = scanner.nextInt();
-            		splitString(model.getRowByIDFromDatabase(id));
+            		//splitString(model.getRowByIDFromDatabase(id));
             		warehouseControl.orderProductsForDeparture("");
             	} catch (Exception e) {
             		e.printStackTrace();
@@ -99,13 +100,5 @@ public void menu() throws RemoteException{
         }
     }while (choice > 0 || choice < 9);
 }
-public void splitString(String string){
 
-        String[] token = string.split(",");
-        product_id = Integer.parseInt(token[0]);
-        name = token[1];
-        type = token[2];
-
-    System.out.println(product_id + "/" + name + "/" + type);
-}
 }
