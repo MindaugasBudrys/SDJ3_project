@@ -1,5 +1,6 @@
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Controller {
@@ -62,15 +63,39 @@ public void menu() throws RemoteException{
                 break;
             case 2:
                 try {
+                	HashMap<Integer, Integer> newProducts = new HashMap<>();
                     view.orderProduct();
-                    id = scanner.nextInt();
-                    quantity = scanner.nextInt();
-                    splitString(model.getRowByIDFromDatabase(id));
-                    warehouseControl.orderNewProducts(product_id, name, type, quantity);
+                    
+                    
+                    String readString = scanner.nextLine();
+                    if (readString.equals("")) {
+                        System.out.println("Ok.");
+                    }
+                    if (scanner.hasNextLine()) {
+                    	id = scanner.nextInt();
+                        splitString(model.getRowByIDFromDatabase(id));
+                    	quantity = scanner.nextInt();
+                    	newProducts.put(id, quantity);
+                    } else {
+                        readString = null;
+                    }
+                    
+                    warehouseControl.orderNewProducts(newProducts);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 break;
+            case 3:
+            	try{
+            		view.orderProductForDeparture();
+            		id = scanner.nextInt();
+            		quantity = scanner.nextInt();
+            		splitString(model.getRowByIDFromDatabase(id));
+            		warehouseControl.orderProductsForDeparture("");
+            	} catch (Exception e) {
+            		e.printStackTrace();
+            	}
+            	break;
         }
     }while (choice > 0 || choice < 9);
 }

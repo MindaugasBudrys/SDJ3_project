@@ -65,7 +65,7 @@ public class Model {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Driver Loaded.");
             // Step 2: Establish the connection to the database.
-            String url = "jdbc:mysql://localhost:3306/sdj3_schema";
+            String url = "jdbc:mysql://localhost:3306/sdj3_warehouse";
 
             conn = DriverManager.getConnection(url, "root", "");
             System.out.println("Connected to DATABASE.");

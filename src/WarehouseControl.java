@@ -1,5 +1,6 @@
 import java.io.Serializable;
 import java.rmi.RemoteException;
+import java.util.HashMap;
 
 public class WarehouseControl implements iWarehouseControl, Serializable {
     private ProductSupply supply;
@@ -16,9 +17,16 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
         pickStation = new PickStation();
     }
     @Override
-    public void orderNewProducts(int id, String name, String type,  int quantity) throws RemoteException {
+    public void orderNewProducts(HashMap<Integer, Integer> newProducts) throws RemoteException {
         try {
-            supply.newProduct(id, name, type, quantity);
+        	int id = 0;
+        	string name = "";
+        	string type = "";
+        	
+        	for (int i = 0; i < newProducts.size(); i++) {
+        		
+        	}
+            supply.newProduct(id, quantity);
             arrivalStation.rearrangeProducts(supply.getProducts());//Rearrange products in to small pallets
             conveyorBelt.addNewPallets(arrivalStation.getPallets());
             storeToShelf();
@@ -28,13 +36,16 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
     }
 
     @Override
-    public void sendGoods(String example) throws RemoteException {
-
+    public void orderProductsForDeparture(String example) throws RemoteException {
+    	
     }
+    
+    
     @Override
     public void sendNewProductsToConveyarBelt() throws RemoteException{
         conveyorBelt.addNewPallets(arrivalStation.getPallets());
     }
+    
     @Override
     public void storeToShelf() throws RemoteException{
 
@@ -46,6 +57,7 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
 
         crane.storeToDatabase(pallet_id, product_id, shelf_id, quantity);
     }
+    
     @Override
     public void createAnOrder(){
 
