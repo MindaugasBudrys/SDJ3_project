@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class WarehouseControl implements iWarehouseControl, Serializable {
-    private ProductSupply productSupply;
+    public ProductSupply productSupply;
     private OrderSupply orderSupply;
     private ArrivalStation arrivalStation;
     private ConveyorBelt conveyorBelt;
@@ -73,11 +73,10 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
     }
 
     @Override
-    public void orderProductsForDeparture(ArrayList<String> newProductsForDeparture) throws RemoteException {
+    public void orderProductsForDeparture(ArrayList<String> newProductsForDeparture) throws Exception {
     	for (int i = 0; i < newProductsForDeparture.size(); i++) {
     		splitString(newProductsForDeparture.get(i));
-    	    System.out.println(product_id + "/" + name);
-    	    orderSupply.newOrder(product_id, name, type, quantity);
+    	    orderSupply.newOrder(product_id, quantity);
     	}
     	
     	for (HashMap.Entry<Product, Integer> entry1 : orderSupply.getProducts().entrySet()) {

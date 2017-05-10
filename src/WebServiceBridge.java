@@ -24,11 +24,11 @@ public class WebServiceBridge implements iWebService{
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
-		return "GREAT";
+		return "GREAT!! Your products have been received!!!";
 		
 	}
 	@Override
-	public String orderProductsForDepartureThroughWebService(String[] productsFromWebService) {
+	public String orderProductsForDepartureThroughWebService(String[] productsFromWebService) throws Exception {
 		ArrayList<String> arrayListOfProducts = new ArrayList<String>();
 		
 		for (int i = 0; i < productsFromWebService.length; i++) {
@@ -39,7 +39,19 @@ public class WebServiceBridge implements iWebService{
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
-		return "GREAT";
+		return "GREAT!! Your products have been sent!!!";
+	}
+
+	@Override
+	public String[] getProductsList() throws Exception {
+		ArrayList<String> arrayFromDB = wc.productSupply.model.getAllProductsFromDatabaseWithQuantity();
+		String[] result = new String[arrayFromDB.size()];
+		
+		for (int i = 0; i < arrayFromDB.size(); i++) {
+			result[i] = arrayFromDB.get(i);
+		}
+		
+		return result;
 	}
 
 }

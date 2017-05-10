@@ -10,6 +10,7 @@ import javax.jws.soap.SOAPBinding.Style;;
 @SOAPBinding(style = Style.RPC)
 public interface iWebService {
 	
+	@WebMethod String[] getProductsList() throws Exception;
 	@WebMethod String orderProductsForArrivalThroughWebService(String[] listOfProductsForWarehouse) throws Exception;
-	@WebMethod String orderProductsForDepartureThroughWebService(String[] listOfProductsForDeparture);
+	@WebMethod String orderProductsForDepartureThroughWebService(String[] listOfProductsForDeparture) throws Exception;
 }

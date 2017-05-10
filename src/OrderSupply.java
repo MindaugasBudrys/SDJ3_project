@@ -6,16 +6,28 @@ public class OrderSupply {
 
 	private ArrayList<SmallPallet> palletsForDeparture;
 	private HashMap<Product, Integer> productsFromDatabase;
+	
+	private Model model;
+	private String name;
+	private String type;
 
-	public OrderSupply() {
+	public OrderSupply() throws Exception {
 		this.productsFromDatabase = new HashMap<Product, Integer>();
+		this.model = new Model();
 	}
 
-	public void newOrder(int id, String name, String type, int quantity) throws RemoteException {
-		System.out.println("The product " + name + " has been added to the order");
+	public void newOrder(int id, int quantity) throws Exception {
+		splitString(model.getRowByIDFromDatabase(id));
+    	System.out.println("Product "+ id + " " + name +" has been sent to departure");
 		productsFromDatabase.put((new Product(id, name, type)), quantity);
 
 	}
+	
+    private void splitString(String string){
+        String[] token = string.split(",");
+        name = token[1];
+        type = token[2];
+    }
 
 	public ArrayList<SmallPallet> getPalletsForConveyorBet() {
 		palletsForDeparture = new ArrayList<SmallPallet>();

@@ -43,6 +43,24 @@ public class Model {
         }
         return products;
     }
+    
+    public ArrayList<String> getAllProductsFromDatabaseWithQuantity() throws Exception {
+        products = new ArrayList<>();
+        String query = ("SELECT prod.product_id, prod.name, prod.type, pall.quantity FROM products prod JOIN pallets pall ON prod.product_id = pall.product_id");
+        ResultSet rs = st.executeQuery(query);
+        int product_id = 0;
+        String name = "NULL";
+        String type = "NULL";
+        int quantity = 0;
+        while (rs.next()) {
+            product_id = rs.getInt("product_id");
+            name = rs.getString("name");
+            type = rs.getString("type");
+            quantity = rs.getInt("quantity");
+            products.add(product_id + " " + name + " " + type + " " + quantity);
+        }
+        return products;
+    }
 
     public boolean updateAddQuantityIntoDatabase(int product_id, int quantity ) throws Exception {
     	String queryAdd = "UPDATE pallets SET quantity = quantity + " + quantity + " WHERE product_id = " + product_id;
