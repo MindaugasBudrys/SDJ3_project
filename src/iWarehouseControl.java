@@ -7,5 +7,4 @@ public interface iWarehouseControl extends Remote{
 	
 	public void orderNewProducts(ArrayList<String> listOfProductsForWarehouse) throws RemoteException;
 	public void orderProductsForDeparture(ArrayList<String> listOfProductsForDeparture) throws RemoteException;
-	public void storeToShelf() throws RemoteException;
 }

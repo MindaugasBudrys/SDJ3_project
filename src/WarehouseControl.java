@@ -106,7 +106,6 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
 	}
     
     
-    @Override
     public void storeToShelf() throws RemoteException{
 
         SmallPallet pallet = conveyorBelt.getToShelf();
