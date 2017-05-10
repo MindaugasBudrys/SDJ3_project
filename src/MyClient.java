@@ -4,7 +4,7 @@ import java.net.*;
 
 public class MyClient {
 	public static void main(String[] args) throws RemoteException, MalformedURLException, NotBoundException {
-		Registry registry = LocateRegistry.getRegistry("10.52.233.26", (new Integer(1159)).intValue());
+		Registry registry = LocateRegistry.getRegistry("localhost", (new Integer(1159)).intValue());
 		iWarehouseControl inter = (iWarehouseControl) (registry.lookup("Warehouse_server"));
 		View view = new View();
 		Controller controller = null;
