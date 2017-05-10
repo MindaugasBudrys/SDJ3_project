@@ -50,7 +50,7 @@ public void menu() throws RemoteException{
 
             case 1:
                 try {
-                    productsList = model.getAllProductsFromDatabase();
+                    productsList = model.getAllProductsFromDatabaseWithQuantity();
                     for(int i = 0; i < productsList.size(); i++){
                         System.out.println(productsList.get(i));
                     }

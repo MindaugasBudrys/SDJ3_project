@@ -42,7 +42,7 @@ public class Model {
 	}
 	
 	public ArrayList<String> getAllProductsFromDatabaseWithQuantity() throws Exception {
-		return databaseServer.getAllProductsFromDatabase();
+		return databaseServer.getAllProductsFromDatabaseWithQuantity();
 	}
     
 

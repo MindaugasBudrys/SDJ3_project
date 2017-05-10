@@ -48,6 +48,7 @@ public class WebServiceBridge implements iWebService{
 		String[] result = new String[arrayFromDB.size()];
 		
 		for (int i = 0; i < arrayFromDB.size(); i++) {
+			System.out.println("Getting product: " + result[i]);
 			result[i] = arrayFromDB.get(i);
 		}
 		

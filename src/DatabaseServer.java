@@ -86,6 +86,7 @@ public class DatabaseServer implements iDatabaseServer {
         String name = "NULL";
         String type = "NULL";
         int quantity = 0;
+        System.out.println("Prod: " + product_id + " Quantity: " + quantity);
         while (rs.next()) {
             product_id = rs.getInt("product_id");
             name = rs.getString("name");
