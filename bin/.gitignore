@@ -17,3 +17,5 @@
 /iWarehouseControl.class
 /iWebService.class
 /WebServiceImplementation.class
+/WarehouseControlWebServicePublisher.class
+/WebServiceBridge.class

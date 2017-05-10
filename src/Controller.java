@@ -67,7 +67,8 @@ public void menu() throws RemoteException{
                     while (keepReading) {
                     	id = scanner.nextInt();
                     	quantity = scanner.nextInt();
-                    	String data = model.getRowByIDFromDatabase(id) + "," + quantity;
+                    	String data = id + "," + quantity;
+                    	
                     	System.out.println(("DATA: " + data));
                     	newProducts.add(data);
 
@@ -95,7 +96,12 @@ public void menu() throws RemoteException{
                     while (keepReading) {
                     	id = scanner.nextInt();
                     	quantity = scanner.nextInt();
-                    	String data = model.getRowByIDFromDatabase(id) + "," + quantity;
+                    	//String data = model.getRowByIDFromDatabase(id) + "," + quantity;
+                    	//System.out.println(("DATA: " + data));
+                    	//newProductsForDeparture.add(data);
+                    	
+                    	String data = id + "," + quantity;
+                    	
                     	System.out.println(("DATA: " + data));
                     	newProductsForDeparture.add(data);
 

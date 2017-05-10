@@ -18,6 +18,7 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
     private String type;
     private int quantity;
     
+    
     public WarehouseControl() throws Exception{
         arrivalStation = new ArrivalStation();
         productSupply = new ProductSupply();
@@ -28,13 +29,12 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
         departureStation = new DepartureStation();
     }
     @Override
-    public void orderNewProducts(ArrayList<String> newProducts) throws RemoteException {
+    public void orderNewProducts(ArrayList<String> newProducts) throws RemoteException, Exception {
         try {
         	
         	for (int i = 0; i < newProducts.size(); i++) {
         		splitString(newProducts.get(i));
-        	    System.out.println(product_id + "/" + name);
-        	    productSupply.newProduct(product_id, name, type, quantity);
+        	    productSupply.newProduct(product_id, quantity);
         	}
 
         	System.out.println("HashMap of products: ");
@@ -63,13 +63,11 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
         }
     }
     
-    public void splitString(String string){
+    private void splitString(String string){
 
         String[] token = string.split(",");
         product_id = Integer.parseInt(token[0]);
-        name = token[1];
-        type = token[2];
-        quantity = Integer.parseInt(token[3]);
+        quantity = Integer.parseInt(token[1]);
 
     System.out.println(product_id + "/" + name + "/" + type);
     }
@@ -106,7 +104,7 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
 	}
     
     
-    public void storeToShelf() throws RemoteException{
+    private void storeToShelf() throws RemoteException{
 
         SmallPallet pallet = conveyorBelt.getToShelf();
         int pallet_id = pallet.getId();
@@ -117,6 +115,7 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
         System.out.println("Storing pallet: " + pallet.getId());
         crane.storeToDatabase(pallet_id, product_id, shelf_id, quantity);
     }
+    
 
 //  @Override
 //  public void rearrangeProducts() throws RemoteException {
