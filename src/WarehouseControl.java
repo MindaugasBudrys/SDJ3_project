@@ -42,9 +42,10 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
 
             arrivalStation.rearrangeProducts(supply.getProducts());//Rearrange products in to small pallets
             conveyorBelt.addNewPallets(arrivalStation.getPallets());
-            for( int i = 0; i < conveyorBelt.getPallets().size(); i++) {
+            System.out.println("Pallets in conveyor belt: " + conveyorBelt.getPallets().size());
+            int totalNumPallets = conveyorBelt.getPallets().size();
+            for( int i = 0; i < totalNumPallets ; i++) {
                 storeToShelf();
-                System.out.println("HELLOOOOOOO1");
             }
         } catch (RemoteException e) {
             e.printStackTrace();
@@ -82,6 +83,7 @@ public class WarehouseControl implements iWarehouseControl, Serializable {
         int shelf_id = 0;//What is that value?
         int quantity = pallet.getQuantity();
 
+        System.out.println("Storing pallet: " + pallet.getId());
         crane.storeToDatabase(pallet_id, product_id, shelf_id, quantity);
     }
     
