@@ -88,17 +88,33 @@ public void menu() throws RemoteException{
                 break;
             case 3:
             	try{
+                	ArrayList<String> newProductsForDeparture = new ArrayList<String>();
             		view.orderProductForDeparture();
-            		id = scanner.nextInt();
-            		quantity = scanner.nextInt();
-            		//splitString(model.getRowByIDFromDatabase(id));
-            		warehouseControl.orderProductsForDeparture("");
+            		
+            		boolean keepReading = true;
+                    while (keepReading) {
+                    	id = scanner.nextInt();
+                    	quantity = scanner.nextInt();
+                    	String data = model.getRowByIDFromDatabase(id) + "," + quantity;
+                    	System.out.println(("DATA: " + data));
+                    	newProductsForDeparture.add(data);
+
+                    	System.out.println("Do you want to order more products for departure? Y/N");
+                    	if (scanner.next().equals("Y")){
+                    		keepReading = true;
+                    	} else {
+                    		keepReading = false;
+                    	}
+                    }
+            		
+            		warehouseControl.orderProductsForDeparture(newProductsForDeparture);
             	} catch (Exception e) {
             		e.printStackTrace();
             	}
             	break;
         }
     }while (choice > 0 || choice < 9);
+    
+    }
 }
 
-}

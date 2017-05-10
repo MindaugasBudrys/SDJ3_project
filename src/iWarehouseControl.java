@@ -5,9 +5,7 @@ import java.util.HashMap;
 
 public interface iWarehouseControl extends Remote{
 	
-	public void orderNewProducts(ArrayList<String> hashmap) throws RemoteException;
-	public void orderProductsForDeparture(String example) throws RemoteException;
-	public void sendNewProductsToConveyarBelt() throws RemoteException;
+	public void orderNewProducts(ArrayList<String> listOfProductsForWarehouse) throws RemoteException;
+	public void orderProductsForDeparture(ArrayList<String> listOfProductsForDeparture) throws RemoteException;
 	public void storeToShelf() throws RemoteException;
-	public void createAnOrder() throws RemoteException;
 }

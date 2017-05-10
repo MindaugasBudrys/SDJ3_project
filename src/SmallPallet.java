@@ -6,10 +6,10 @@ public class SmallPallet {
     private int quantity;
     private boolean toStore;
 
-    public SmallPallet(int id, Product p, int q, boolean store){
+    public SmallPallet(int id, Product p, int quant, boolean store){
     	this.pallet_id = id;
         this.product = p;
-        this.quantity = q;
+        this.quantity = quant;
         this.toStore = store;
     }
     

@@ -9,7 +9,6 @@ public class ConveyorBelt implements Serializable{
     this.pallets = new ArrayList<SmallPallet>();
     }
     public void addNewPallets(ArrayList<SmallPallet> p) throws RemoteException{
-    
     	pallets = p;
     }
     

@@ -1,79 +1,44 @@
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+select * from sdj3_warehouse.products;
+select * from sdj3_warehouse.pallets;
 
---
--- Database: `sdj3_warehouse`
---
+ALTER TABLE pallets AUTO_INCREMENT = 1;
+ALTER TABLE products AUTO_INCREMENT = 1;
 
--- --------------------------------------------------------
+ALTER TABLE pallets MODIFY COLUMN shelf_id INT NOT NULL DEFAULT 0;
 
---
--- Struktur-dump for tabellen `pallets`
---
-
-CREATE TABLE `pallets` (
-  `pallet_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `shelf_id` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Struktur-dump for tabellen `products`
---
-
-CREATE TABLE `products` (
-  `product_id` bigint(20) UNSIGNED NOT NULL,
-  `name` text NOT NULL,
-  `type` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Data dump for tabellen `products`
---
 
 INSERT INTO `products` (`product_id`, `name`, `type`) VALUES
 (1, 'Dreamzone', 'Pillow'),
-(3, 'Classic', 'Pillow'),
-(5, 'Aulum', 'Chair'),
-(6, 'Austena', 'Chair'),
-(7, 'Aloha', 'Chair');
+(2, 'Classic', 'Pillow'),
+(3, 'Modern', 'Pillow'),
+(4, 'Comfort', 'Pillow'),
+(5, 'Aliga', 'Chair'),
+(6, 'Ninmtofte', 'Chair'),
+(7, 'Aulum', 'Chair'),
+(8, 'Austena', 'Chair'),
+(9, 'Aloha', 'Chair');
 
---
--- Begrænsninger for dumpede tabeller
---
-
---
--- Indeks for tabel `pallets`
---
-ALTER TABLE `pallets`
-  ADD PRIMARY KEY (`pallet_id`);
-
---
--- Indeks for tabel `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`product_id`),
-  ADD UNIQUE KEY `id` (`product_id`);
-
---
--- Brug ikke AUTO_INCREMENT for slettede tabeller
---
-
---
--- Tilføj AUTO_INCREMENT i tabel `products`
---
-ALTER TABLE `products`
-  MODIFY `product_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO `pallets` (`product_id`, `quantity`) VALUES
+('1', '200'),
+('2', '200'),
+('3', '200'),
+('4', '200'),
+('5', '200'),
+('6', '200'),
+('7', '200'),
+('8', '200'),
+('9', '200'),
+('10', '200'),
+('11', '200'),
+('12', '200'),
+('13', '200'),
+('14', '200'),
+('15', '200'),
+('16', '200'),
+('17', '200'),
+('18', '200'),
+('19', '200'),
+('20', '200');

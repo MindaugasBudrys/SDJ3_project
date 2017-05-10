@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class ArrivalStation implements Serializable{
     private ArrayList<SmallPallet> pallets;
     private HashMap<Product, Integer> listOfProducts;
+    
     public ArrivalStation(){
 
     }
@@ -20,7 +21,13 @@ public class ArrivalStation implements Serializable{
             System.out.println(prod.getId() + " " + integer);
         }
 
+        
     }
+    
+    public void resetArrayListOfPallets(){
+    	pallets.clear();
+    }
+    
     public ArrayList<SmallPallet> getPallets(){
         return pallets;
     }

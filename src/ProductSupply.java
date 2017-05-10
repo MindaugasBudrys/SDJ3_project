@@ -15,6 +15,11 @@ public class ProductSupply implements Serializable{
             System.out.println("New product "+ name +" has been received");
             products.put((new Product(id, name, type)), quantity);
     }
+    
+    public void resetHashMapOfProducts(){
+    	products.clear();
+    }
+    
     public HashMap<Product, Integer> getProducts(){
         return products;
     }
