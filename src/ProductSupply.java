@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 public class ProductSupply implements Serializable{
 
-	
     private HashMap<Product, Integer> products;
     public Model model;
 

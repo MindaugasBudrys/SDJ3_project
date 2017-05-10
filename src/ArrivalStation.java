@@ -9,6 +9,7 @@ public class ArrivalStation implements Serializable{
     public ArrivalStation(){
 
     }
+    
     public void rearrangeProducts(HashMap<Product, Integer> p){
         this.listOfProducts = p;
         pallets = new ArrayList<SmallPallet>();

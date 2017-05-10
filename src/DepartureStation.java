@@ -1,8 +1,6 @@
 import java.util.HashMap;
 
 public class DepartureStation {
-
-	//private HashMap<Product, Integer> productsForDeparture;
 	
 	public DepartureStation(){
 		
