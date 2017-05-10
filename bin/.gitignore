@@ -19,3 +19,7 @@
 /WebServiceImplementation.class
 /WarehouseControlWebServicePublisher.class
 /WebServiceBridge.class
+/iDatabaseControl.class
+/DatabaseControl.class
+/DatabaseServer.class
+/iDatabaseServer.class
